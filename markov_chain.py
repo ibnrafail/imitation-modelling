@@ -3,7 +3,7 @@ import math
 from fractions import Fraction
 
 
-def fun(num):
+def round_(num):
     temp = (num - int(num)) * 100
     if temp >= 50:
         num = math.ceil(num)
@@ -28,9 +28,9 @@ for i in range(0, 100):
     temp1 = 0.9 * x1
     temp2 = 0.1 * x1 + 0.8 * x2
     temp3 = x3 + 0.2 * x2
-    temps1 = fun(temp1)
-    temps2 = fun(temp2)
-    temps3 = fun(temp3)
+    temps1 = round_(temp1)
+    temps2 = round_(temp2)
+    temps3 = round_(temp3)
     if 0 < temp1 < 1 and 0 < temp2 < 1 and 98.0 < temp3 < 99.0:
         output.append([0, 1, 99])
         output.append([0, 0, 100])
